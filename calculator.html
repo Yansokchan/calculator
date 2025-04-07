@@ -3,83 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Modern Calculator</title>
     <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
-        <div class="calculator">
-            <input id="screen-show"></input>
+    <div class="calculator">
+        <div class="screen-container">
+            <input id="screen-show" placeholder="0" readonly></input>
+            <div class="screen-border"></div>
+        </div>
+        <div class="buttons-container">
             <div class="row">
-                <button class="clear-button" onclick="
-                    clearScreen();
-                ">C</button>
-                <button class="clear-button" onclick="
-                    deleteNumber();
-                ">Del</button>
-                <button class="operater" onclick="
-                    factorial();
-                ">!</button>
-                <button class="operater" onclick="
-                    addToDisplay(' / ');
-                ">/</button>
+                <button class="clear-button" onclick="clearScreen()">C</button>
+                <button class="clear-button" onclick="deleteNumber()">⌫</button>
+                <button class="operater" onclick="factorial()">!</button>
+                <button class="operater" onclick="addToDisplay(' / ')">÷</button>
             </div>
             <div class="row">
-                <button onclick="
-                    addToDisplay(7);
-                ">7</button>
-                <button onclick="
-                    addToDisplay(8);
-                ">8</button>
-                <button onclick="
-                    addToDisplay(9);
-                ">9</button>
-                <button class="operater" onclick="
-                    addToDisplay(' * ');
-                ">X</button>
+                <button onclick="addToDisplay(7)">7</button>
+                <button onclick="addToDisplay(8)">8</button>
+                <button onclick="addToDisplay(9)">9</button>
+                <button class="operater" onclick="addToDisplay(' * ')">×</button>
             </div>
             <div class="row">
-                <button onclick="
-                    addToDisplay(4);
-                ">4</button>
-                <button onclick="
-                    addToDisplay(5);
-                ">5</button>
-                <button onclick="
-                    addToDisplay(6); 
-                ">6</button>
-                <button class="operater" onclick="
-                    addToDisplay(' - ');
-                ">-</button>
+                <button onclick="addToDisplay(4)">4</button>
+                <button onclick="addToDisplay(5)">5</button>
+                <button onclick="addToDisplay(6)">6</button>
+                <button class="operater" onclick="addToDisplay(' - ')">−</button>
             </div>
             <div class="row">
-                <button onclick="
-                    addToDisplay(1);
-                ">1</button>
-                <button onclick="
-                    addToDisplay(2);
-                ">2</button>
-                <button onclick="
-                    addToDisplay(3);
-                ">3</button>
-                <button class="operater" onclick="
-                    addToDisplay(' + ');
-                ">+</button>
+                <button onclick="addToDisplay(1)">1</button>
+                <button onclick="addToDisplay(2)">2</button>
+                <button onclick="addToDisplay(3)">3</button>
+                <button class="operater" onclick="addToDisplay(' + ')">+</button>
             </div>
             <div class="row">
-                <button onclick="
-                    addToDisplay('00');
-                ">00</button>
-                <button onclick="
-                    addToDisplay(0);
-                ">0</button>
-                <button onclick="
-                    addToDisplay('.');
-                ">.</button>
-                <button class="equal-button" onclick="
-                    calculate();
-                ">=</button>
+                <button onclick="addToDisplay('00')">00</button>
+                <button onclick="addToDisplay(0)">0</button>
+                <button onclick="addToDisplay('.')">.</button>
+                <button class="equal-button" onclick="calculate()">=</button>
             </div>
         </div>
+    </div>
     <script src="calculator.js"></script>
 </body>
 </html>
