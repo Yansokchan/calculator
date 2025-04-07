@@ -4,9 +4,25 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/calculator.js",
+      "dest": "/calculator.js"
+    },
+    {
+      "src": "/calculator.css",
+      "dest": "/calculator.css"
+    },
     {
       "src": "/(.*)",
       "dest": "/calculator.html"
